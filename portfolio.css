@@ -1,0 +1,256 @@
+*{
+    margin: 0;
+    padding: 0;box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+
+}
+body{
+    overflow-x: hidden;
+}
+aside{
+    position:fixed;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: #333333;
+    
+}
+main{
+     background-color:#161616;
+    color: #d6d6d6;
+    position: relative;
+    /* leave 200px of the aside */
+    left: 200px;
+    width: 100%;
+    
+}
+ 
+.text-hero{
+    font-size: 44px;
+    /* max-width: 40%; */
+}
+.gradient{
+    background: rgb(174,16,230);
+    background: linear-gradient(90deg, rgba(174,16,230,1) 5%, rgba(27,98,237,1) 52%, rgba(140,220,223,1) 100%);
+background-clip: text;
+ -webkit-text-fill-color: transparent;
+ padding: 1rem;
+
+}
+.hero-buttons{
+    display: flex;
+    
+    
+    gap: 2rem;
+    margin: 2rem 0rem;
+    
+     
+
+}
+.hero-btn1::before{
+    content:"";
+    display:block;
+    background: linear-gradient(
+        90deg,
+        hsla(197, 100%, 64%, 1) 0%,
+        hsla(339, 100%, 55%, 1) 100%
+      );
+    height: 200px;
+    width :200px;
+    position: absolute;
+    left: -50%;
+    top:-70%;
+    
+    z-index: -2;
+
+    
+
+}
+.hero-buttons>button{
+     padding: 1rem;
+     border: 5px solid white; 
+     border-radius: 15px;
+}
+
+
+ .hero-btn1{
+     position: relative;
+     z-index: 1;
+     overflow: hidden;
+     
+     
+}
+.hero-btn2{
+    height: 3em;
+     padding-left: 1rem;
+     padding-right: 5rem;
+      
+ } */
+.desc-hero{
+    font-size: 20px;
+    margin:1.5rem;
+    color:#999797;
+}
+section{
+    /* we gave height 75vh just so that we can scroll through it
+    height: 75vh; */
+    padding: 4rem;
+     margin-bottom: 4rem; 
+    
+} 
+ nav{
+    padding-left: 1.2rem; 
+   padding-right:1.2rem ;
+    height:100%;
+ }
+ ul{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+ }
+ li{
+     
+    list-style: none;
+    color: #d6d6d6;
+    font-size: larger;
+    line-height: 1.15;
+   display: flex;
+   justify-content: start;
+   /* align-items: center; */
+   gap: 10px;
+   width: 100%;
+   height: 2em;
+   /* padding:0.2em; */
+   padding:10px;
+   border-radius: 10px;
+   transition:all ease-in 200ms
+
+
+ }
+ .hello-section{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+ }
+ img{
+    width: 24px;
+    height: 24px;
+ }
+ .icon-me>img{
+    height: 300px;
+    width: 300px;
+ }
+
+ li:hover{
+    cursor: pointer;
+    border: #5a5959 solid 2px;
+    background-color: #5d5a5a;
+    border-radius:10px ;
+
+ }
+ /* if we use svgs as image whatever properties we are giving dont work */
+  
+ @media screen and (width<=480px){
+    .nav-desktop{
+        display: none;
+    }
+    .nav-mobile{
+        position: fixed;
+        width: 100vh;
+        bottom: 0px;
+        z-index: 8;
+        height: 4rem;
+            background-color: #333333;
+    } 
+    main{
+        left:0px;
+    
+        /* height: 100vh; */
+    }
+    .nav-mobile-body{
+        
+        /* width: 100vh;
+        z-index: 9; */
+        position: fixed;
+        width: 100vh;
+        bottom: 0px;
+        z-index: 8;
+        height: 4rem;
+            background-color: #333333;
+     
+    }
+    .nav-mobile-list{
+        
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        
+        padding-bottom:25 px;
+        
+        
+        width: 480px;
+    }
+    .nav-mobile-list>li{
+
+        display: flex;
+        flex-direction: column;
+        
+        justify-content: start;
+        align-items: center;
+        line-height: 1.15;
+        height: 5em;
+        /* font-size:smaller ; */
+    }
+   .nav-mob-item{
+      font-size: smaller;
+   }
+    img{
+        size: smaller;
+    }
+     
+    .hello-section{
+        display:grid;
+        grid-template-columns: 1fr;
+     }
+     .text-hero{
+        font-size: 38px;
+        /* max-width: 40%; */
+    }
+    /* .nav-mobile-body{
+        /* position: fixed; */
+        /* bottom: 0px; */
+        /* background-color: blue; */
+        /* width:100%;
+        z-index: 9;
+    }
+    .nav-mobile-list{
+        display:grid;
+        grid-template-columns: repeat(5,1fr);
+        padding: 1rem;
+    }
+    .nav-mobile-list>li{
+        
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        line-height: 1.15;
+    padding-top: 20px;
+    padding-bottom: 20px;
+        gap: 2px;
+        font-size: smaller;
+        z-index: 10;
+    } */ 
+    
+   
+    
+
+ }
+ @media screen and (width>480px) {
+    .nav-mobile{
+        display:none;
+    }
+    
+ }
